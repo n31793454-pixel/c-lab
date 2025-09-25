@@ -1,0 +1,26 @@
+ #include <stdio.h>
+
+int main() {
+    
+    int x;
+    int found = 0; 
+
+    printf("Finding at least one root of the equation x^2 - 5x + 6 = 0\n");
+
+    
+    for (x = -100; x <= 100; ++x) {
+        int result = x * x - 5 * x + 6;
+
+        if (result == 0) {
+            printf("One root found: x = %d\n", x);
+            found = 1;
+            break;  
+        }
+    }
+
+    if (!found) {
+        printf("No integer root found in the range.\n");
+    }
+
+    return 0;
+}
